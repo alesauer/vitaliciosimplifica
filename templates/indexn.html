@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assinatura Vitalícia Simplifica Treinamentos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" class="logo">
+    <p class="title">ASSINATURA VITALÍCIA DA SIMPLIFICA TREINAMENTOS</p>
+    <p class="info-text">Digite seu e-mail cadastrado para continuar</p>
+    <form id="consulta-form" class="consulta-form" method="get" action="/consulta">
+      <input id="consulta-input" type="email" name="email" placeholder="Digite seu e-mail" class="input-field" required>
+      <button type="submit" class="submit-btn">ENVIAR</button>
+    </form>
+        <p class="info-text"></p>
+  </div>
+  
+  <footer class="main-footer">
+    <p>&copy; 2025 Simplifica Treinamentos. Todos os direitos reservados.</p>
+    <p>CNPJ 42.875.361/0001-21 - R. Renato Silva, 214 - Guarujá Mansões, Betim - MG, 32607-054</p>
+    <p>Precisa de Ajuda? <a href="https://i.sendflow.pro/l/wapp-comercial-simplifica">Entre em Contato</a></p>
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CURSO COMPLETO DE IA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='opcoes.css') }}">
+</head>
+<body class="opcao-page">
+  <div class="container">
+    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" class="logo">
+
+    <p class="title">QUAL FORMA DE PAGAMENTO VOCÊ GOSTARIA?</p>
+    <p class="info-text">Clique na opção de pagamento que melhor atenda a sua necessidade</p>
+
+    <div class="discount-badge">🎁 Você ganhou <strong>R$844,00</strong> de desconto!</div>
+
+    <div class="payment-options">
+      <div class="box">
+        <img src="{{ url_for('static', filename='img/opcao1.png') }}" alt="Cartão de Crédito" class="icon">
+        <p class="option-title">Cartão de Crédito</p>
+        <p class="option-subtitle">À vista ou até 12x</p>
+        <a href="https://pay.hotmart.com/L98889958F?off=wqinrmyj&checkoutMode=10&offDiscount=CASHBACK-VIP&bid=1759922872546&fromExitPopup=true" class="option-btn">QUERO ESSA OPÇÃO</a>
+      </div>
+
+      <div class="box">
+        <img src="{{ url_for('static', filename='img/opcao2.png') }}" alt="Pix Automático ou Cartão Recorrente" class="icon">
+        <p class="option-title">Pix Aut. ou Cartão Recorrente</p>
+        <p class="option-subtitle">Parcelado em até 12x</p>
+        <a href="https://pay.hotmart.com/L98889958F?off=xd4i44aj&checkoutMode=10&bid=1759922873728&fromExitPopup=true" class="option-btn">QUERO ESSA OPÇÃO</a>
+      </div>
+
+      <div class="box">
+        <img src="{{ url_for('static', filename='img/opcao3.png') }}" alt="Boleto ou Pix" class="icon">
+        <p class="option-title">Boleto ou Pix</p>
+        <p class="option-subtitle">À vista</p>
+        <a href="https://pay.hotmart.com/L98889958F?off=wqinrmyj&checkoutMode=10&offDiscount=CASHBACK-VIP&bid=1759922872546&fromExitPopup=true" class="option-btn">QUERO ESSA OPÇÃO</a>
+      </div>
+    </div>
+  </div>
+   <footer class="main-footer">
+    <p>&copy; 2025 Simplifica Treinamentos. Todos os direitos reservados.</p>
+    <p>CNPJ 42.875.361/0001-21 - R. Renato Silva, 214 - Guarujá Mansões, Betim - MG, 32607-054</p>
+    <p>Precisa de Ajuda? <a href="https://i.sendflow.pro/l/wapp-comercial-simplifica">Entre em Contato</a></p>
+  </footer>
+</body>
+</html>

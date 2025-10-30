@@ -1,0 +1,170 @@
+/* Opções — LARGURA MAIOR e boxes em linha */
+.opcao-page .container {
+  margin: 40px auto;
+  width: 98%;              /* aproveita quase toda a largura */
+  max-width: 1760px;       /* mais largo; ajuste para 1920px se quiser fullHD */
+  text-align: center;
+  background-color: #fff;
+  padding: 60px 48px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+/* Em telas muito grandes (≥1920px), pode aumentar mais */
+@media (min-width: 1920px) {
+  .opcao-page .container { max-width: 1880px; }
+}
+
+.opcao-page .logo {
+  max-width: 240px;
+  height: auto;
+  margin: 0 auto 16px;
+  display: block;
+}
+
+.opcao-page .title {
+  font-size: 26px;
+  font-weight: 600;
+  margin: 12px 0 8px;
+  color: #222;
+}
+.opcao-page .info-text,
+.opcao-page .price-info {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #555;
+}
+
+/* linha de cards em telas largas */
+.opcao-page .payment-options {
+  display: flex;
+  flex-wrap: nowrap;       /* força ficar lado a lado */
+  justify-content: center; /* centraliza o trio */
+  gap: 40px;               /* espaço entre os boxes */
+  margin-top: 28px;
+  overflow-x: visible;     /* não corta conteúdo */
+}
+
+.opcao-page .box {
+  width: 360px;            /* caixas mais largas */
+  padding: 24px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.opcao-page .box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.opcao-page .icon {
+  width: 110px;
+  height: auto;
+  margin-bottom: 12px;
+}
+.opcao-page .option-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+.opcao-page .option-subtitle {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+/* badge de desconto (quando houver) */
+.discount-badge {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: #eef6ff;
+  border: 1px solid #cfe6ff;
+  font-weight: 600;
+  color: #1d4f91;
+}
+
+/* botão de WhatsApp (opcao3) */
+.wpp-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #25D366;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: .2px;
+  transition: transform .15s ease, filter .15s ease;
+}
+.wpp-btn:hover { transform: translateY(-1px); filter: brightness(0.95); }
+
+/* Responsividade: em telas menores, volta a quebrar linha */
+@media (max-width: 1200px) {
+  .opcao-page .payment-options { flex-wrap: wrap; gap: 24px; }
+  .opcao-page .box { width: 320px; }
+}
+@media (max-width: 720px) {
+  .opcao-page .container {
+    width: 96%;
+    max-width: 96%;
+    padding: 36px 20px;
+  }
+  .opcao-page .box {
+    width: 100%;
+    max-width: 420px;
+  }
+  .opcao-page .payment-options { gap: 18px; }
+}
+
+/* ===== Fix de estilização dos botões "QUERO ESSA OPÇÃO" ===== */
+/* 1) Reseta estilos default e aumenta especificidade para vencer regras genéricas */
+.opcao-page .box button.option-btn,
+.opcao-page .box a.option-btn {
+  -webkit-appearance: none;
+  appearance: none;
+  background: none;
+  border: none;
+  text-decoration: none;
+  font: inherit;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+/* 2) Estilo aplicado com alta especificidade (vence styles.css genérico) */
+.opcao-page .payment-options .box .option-btn {
+  display: inline-block;
+  background-color: #4E95D9;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: .2px;
+  border: 0;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform .15s ease, filter .15s ease, box-shadow .15s ease;
+  text-decoration: none; /* caso seja <a> */
+  line-height: 1.2;
+}
+
+.opcao-page .payment-options .box .option-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(0.96);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.opcao-page .payment-options .box .option-btn:active {
+  transform: translateY(0);
+  filter: brightness(0.92);
+}
+
+.opcao-page .payment-options .box .option-btn:focus-visible {
+  outline: 2px solid #1d4f91;
+  outline-offset: 2px;
+}
+
+/* 3) Se algum CSS global estiver forçando outra cor, esta linha garante prioridade */
+.opcao-page .payment-options .box .option-btn { background-color: #4E95D9 !important; color: #fff !important; }

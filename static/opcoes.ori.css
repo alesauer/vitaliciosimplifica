@@ -1,0 +1,123 @@
+/* Opção 2 — SUPER WIDE (ainda mais larga) */
+.opcao-page .container {
+  margin: 40px auto;
+  width: 96%;
+  max-width: 1600px;   /* bem mais largo */
+  text-align: center;
+  background-color: #fff;
+  padding: 60px 48px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+/* Em telas muito grandes (≥1920px), expande ainda mais */
+@media (min-width: 1920px) {
+  .opcao-page .container {
+    max-width: 1760px; /* super wide */
+  }
+}
+
+.opcao-page .logo {
+  max-width: 240px;
+  height: auto;
+  margin: 0 auto 16px;
+  display: block;
+}
+
+.opcao-page .title {
+  font-size: 26px;
+  font-weight: 600;
+  margin: 12px 0 8px;
+  color: #222;
+}
+
+.opcao-page .info-text,
+.opcao-page .price-info {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #555;
+}
+
+.opcao-page .payment-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;           /* mais espaço entre os cards */
+  margin-top: 28px;
+}
+
+.opcao-page .box {
+  width: 320px;        /* cards mais largos */
+  padding: 24px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.opcao-page .box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.opcao-page .icon {
+  width: 104px;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.opcao-page .option-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #333;
+}
+
+.opcao-page .option-subtitle {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.opcao-page .option-btn {
+  background-color: #4E95D9;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.opcao-page .option-btn:hover {
+  background-color: #3873a5;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .opcao-page .container {
+    width: 96%;
+    max-width: 980px;
+    padding: 44px 28px;
+  }
+  .opcao-page .box {
+    width: 300px;
+  }
+  .opcao-page .payment-options {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 720px) {
+  .opcao-page .container {
+    width: 96%;
+    max-width: 96%;
+    padding: 36px 20px;
+  }
+  .opcao-page .box {
+    width: 100%;
+    max-width: 420px;
+  }
+  .opcao-page .payment-options {
+    gap: 18px;
+  }
+}
