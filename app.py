@@ -40,11 +40,11 @@ def consulta():
 
         desconto = (row['desconto'] or '').strip().upper()
 
-        if desconto == '3000':
-            return render_template('opcao3.html')
-        elif desconto == '747':
+        if desconto == '2000':
+            return render_template('opcao4.html')
+        elif desconto == '3000':
             return render_template('opcao1.html')
-        elif desconto == '844':
+        elif desconto == '2500':
             return render_template('opcao2.html')
         else:
             return render_template('index.html', not_found=True, searched_email=email)
